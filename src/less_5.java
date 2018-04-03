@@ -4,6 +4,7 @@ public class less_5 {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 2, 6, 7, 9, 4};
         bubbleSort(arr);
+        System.out.println("max number - " + getMaxFromArray(arr));
     }
 
     public static void bubbleSort(int[] arr) {
@@ -20,5 +21,15 @@ public class less_5 {
             System.out.println();
             System.out.println("Sorted array: " + Arrays.toString(arr));
         }
+    }
+
+    public static int getMaxFromArray(int[] array) {
+        int indexOfMax = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[indexOfMax]) {
+                indexOfMax = i;
+            }
+        }
+        return array[indexOfMax];
     }
 }
