@@ -5,6 +5,7 @@ public class less_5 {
         int[] arr = new int[]{3, 2, 6, 7, 9, 4};
         bubbleSort(arr);
         System.out.println("max number - " + getMaxFromArray(arr));
+        System.out.println("min number - " + getMinFromArray(arr));
     }
 
     public static void bubbleSort(int[] arr) {
@@ -31,5 +32,15 @@ public class less_5 {
             }
         }
         return array[indexOfMax];
+    }
+
+    public static int getMinFromArray(int[] array) {
+        int indexOfMin = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[indexOfMin]) {
+                indexOfMin = i;
+            }
+        }
+        return array[indexOfMin];
     }
 }
